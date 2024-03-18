@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taschenrechner</title>
+</head>
+<body>
+    <h2>Taschenrechner</h2>
+    <p>Geben Sie zwei Zahlen ein, um mathematische Operationen durchzuführen:</p>
+    <input type="number" id="number1" placeholder="Zahl1">
+    <input type="number" id="number2" placeholder="Zahl2">
+    <button onclick="performCalculations()">Berechne</button>
+    <h4>Ergebnisse der Berechnungen</h4>
+    <div id="result"></div>
+
+
+    <script>
+        function performCalculations(){
+            const number1 = parseInt(document.getElementById("number1").value);
+            const number2 = parseInt(document.getElementById("number2").value);
+            var sum = number1 + number2;
+
+            const resultDiv = document.getElementById("result").innerHTML = `
+            <p>Summe von Zahl 1 und Zahl 2 ist: ${sum}.</p>
+            
+            `;
+            
+            
+    
+
+        }
+    
+    </script>
+
+</body> 
+</html>
