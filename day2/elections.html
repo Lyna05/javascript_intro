@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wahlberechtigung</title>
+</head>
+<body>
+    <form id="meinFormular">
+        <label for="userinput">Gib dein Alter ein:</label>
+        <input type="number" id="userinput" name="Eingabe"> 
+        <input type="submit" value="Absenden"> 
+    </form>
+    <p id="ergebnis"></p>
+
+    <script>
+        document.getElementById("meinFormular").addEventListener("submit", function(e){
+
+            e.preventDefault();
+
+            let alter = parseInt(document.getElementById("userinput").value);
+
+            if(alter < 18) { 
+                document.getElementById("ergebnis").textContent = "Du bist nocht nicht wahlberechtigt.";  
+            } else {
+                document.getElementById("ergebnis").textContent = "Du bist wahlberechtigt.";
+            }
+
+        });
+        
+    </script>
+    
+</body>
+</html>
