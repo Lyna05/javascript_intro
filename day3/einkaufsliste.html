@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Meine Einkaufsliste</h2>
+    <input type="text" id="artikelInput" placeholder="Artikel hinzufügen">
+    <button onclick="artikelHinzufuegen()">Hinzufügen</button>
+    <ul id="einkaufsliste"></ul>
+
+    <script>
+        function artikelHinzufuegen() {
+            const input = document.getElementById("artikelInput")
+            const neueArtikel = input.value;
+            if (neueArtikel) {
+                const listItem = document.createElement("li");
+                listItem.textContent = neueArtikel;
+                document.getElementById("einkaufsliste").appendChild(listItem);
+                input.value = "";
+            }
+
+        }
+
+    </script>
+    
+</body>
+</html>
